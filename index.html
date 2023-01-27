@@ -6,38 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="calculator-container">
-        <div id="display-container">
-            <div id="ongoing-operation">
-                <div id="previous-operand">0545</div>
-                <div id="operator">+</div>
+    <div class="calculator">
+        <div class="calculator-container">
+            <div class="output">
+                <div class="previous-operand">123 +</div>
+                <div class="current-operand">12345</div>
             </div>
-            <div id="current-operand">3493945</div>
-        </div>
-        <div id="buttons-container">
-            <button id="clear-all-button">AC</button>
-            <button id="delete-button">Delete</button>
-            <button class="operator-button">÷</button>
-            <button class="number-button">7</button>
-            <button class="number-button">8</button>
-            <button class="number-button">9</button>
-            <button class="operator-button">*</button>
-            <button class="number-button">4</button>
-            <button class="number-button">5</button>
-            <button class="number-button">6</button>
-            <button class="operator-button">-</button>
-            <button class="number-button">1</button>
-            <button class="number-button">2</button>
-            <button class="number-button">3</button>
-            <button class="operator-button">+</button>
-            <button class="number-button">0</button>
-            <button class="number-button">.</button>
-            <button class="operator-button">=</button>
+            <div class="buttons">
+                <div class="row">
+                    <button class="flex-two">AC</button>
+                    <button>CE</button>
+                    <button>/</button>
+                </div>
+                <div class="row">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>&#215</button>
+                </div>
+                <div class="row">
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>-</button>
+                </div>
+                <div class="row">
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>+</button>
+                </div>
+                <div class="row">
+                    <button>.</button>
+                    <button>0</button>
+                    <button class="flex-two">=</button>
+                </div>
+
+            </div>
         </div>
     </div>
-</body>
-</html>
+</body> 
+</html> 
+
