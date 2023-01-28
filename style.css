@@ -84,8 +84,6 @@ body {
     cursor: pointer;
     transition: background-color 0.10s,
         box-shadow 0.05s;
-
-
 }
 
 button:hover {
@@ -94,7 +92,7 @@ button:hover {
 
 button:active {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 1) inset, -4px -4px 10px rgba(255, 255, 255, 0.05) inset;
-    background-color: #111111;
+    /* background-color: #111111; */
 }
 
 .row .flex {
