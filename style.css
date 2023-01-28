@@ -1,4 +1,4 @@
-*::before, *::after {
+*, *::before, *::after {
     box-sizing: border-box;
     font-family: 'Titillium Web', sans-serif;
     font-weight: 400;
@@ -12,8 +12,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: linear-gradient(#7956b0, #a161f7);
+    background-color: #7f9096;
+    /* background: linear-gradient(#7956b0, #a161f7); */
 }
 
 .calculator-container {
@@ -26,8 +26,34 @@ body {
     background-color: #171717;
 }
 
-/* Buttons style */
+/* Display style */
+.output {
+    min-height: 120px;
+    padding: 30px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.previous-operand {
+    color: #7956b0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.current-operand {
+    color: #ebebeb;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Buttons style */
 .buttons {
     display: flex;
     flex-direction: column;
@@ -42,19 +68,58 @@ body {
 }
 
 .row > button {
+    text-align: center;
+    padding: 0;
     width: 100px;
     height: 100px;
     border: none;
+    outline: none;
+    border-radius: 30px;
 
     color: #ebebeb;
     font-size: 2rem;
-
-    border-radius: 30px;
-
     background-color: #171717;
     box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.05), 5px 5px 10px rgba(0, 0, 0, 1);
+
+    cursor: pointer;
+    transition: background-color 0.10s,
+        box-shadow 0.05s;
+
+
 }
 
-.row .flex-two {
+button:hover {
+    background-color: #ebebeb0f;
+}
+
+button:active {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1) inset, -4px -4px 10px rgba(255, 255, 255, 0.05) inset;
+    background-color: #111111;
+}
+
+.row .flex {
     flex: 1;
+}
+
+#all-clear-button,
+#delete-button {
+    color: #7c7c7c;
+}
+
+#divide-button,
+#multiply-button,
+#subtract-button,
+#add-button {
+    color: #a161f7;
+    font-size: 2.5rem;
+}
+
+#equals-button {
+    background-color: #a161f7;
+    color: #171717;
+    font-size: 3rem;
+}
+
+#equals-button:active {
+    background-color: #7956b0;
 }
